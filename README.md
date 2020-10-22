@@ -5,6 +5,7 @@ This is a series of Jupyter notebooks containing graduate school coursework.
 ## Table of Contents
 - [Bayesian Modeling](#bayes-model)
 - [k-Means Clustering](#k-means-model)
+- [Convolutional Neural Network](#cnn-model)
 
 ### [Bayes Model](https://github.com/joshua-robison/ASU-GradSchool/blob/master/Notebooks/bayes_model.ipynb)
 #### Data Used: [MNIST Image Data](https://github.com/joshua-robison/ASU-GradSchool/blob/master/Datasets/bayes_data)
