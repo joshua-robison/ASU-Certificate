@@ -1,0 +1,79 @@
+To run this notebook as is, run the following commands in a terminal:
+
+>> python collect_data.py
+>> python train_model.py
+>> python test_model.py
+
+Make sure all files are in the defined folder structure:
+
+--Folder/
+
+  --assets/
+    --robot.png
+    --robot_inverse.png
+    
+  --saved/
+    --practice.csv
+    --saved_model.pkl
+    --scaler.pkl
+    
+  --collect_data.py
+  --make_datasets.py
+  --network.py
+  --train_model.py
+  --test_model.py
+  --simulation.py
+  --controls.py
+  --helper.py
+
+Below are the steps and brief explanations for the procedure defined above:
+
+Step 1: collect_data.py
+        note: the output csv file will be size Nx7
+              there are 7 parameters: 5 sensor readings, an action, and whether or not a collision occurred
+              N is equal to the total_actions variable. it is set to 1,000 which runs relatively quickly
+              setting this to a higher value could improve performance
+              
+Step 2: network.py
+        note: this is the defined architecture
+              it is currently using two hidden layers, dropout, and a leaky relu activation function
+              the final output are two nodes with a softmax to get probability of collision
+              changing the architecture could improve or degrade results
+              
+Step 3: wrapper -> train_model.py
+
+  Set parameters:
+    batch size       -> batch_size = 16
+    number of epochs -> epochs     = 100
+  
+  These values are set in the main method and can be tweaked for testing effects
+
+  Step A: initialize neural network (network.py)
+          this can be changed by changing the NeuralNetwork class
+  
+  Step B: initialize optimizer (Adam)
+          the learning rate can be changed to see effects
+
+  Step C: initialize train and validation data loaders
+          training and validation datasets are created with 'make_datasets.py' -> generate_datasets function
+          this function applies a MinMaxScaler to all the simulation data and saves the scaler
+          for testing the simulation in the future
+          the number of collisions is disproportional to the number of non-collisions so upsampling
+          with replacement methods were used to even the distributions
+          changing this to downsampling or accepting the data as is could affect results
+
+  Step D: process function
+          this function trains the model by calling the train function for each epoch
+          it also evaluates the validation set for every epoch
+          average loss and accuracy are recorded and printed to the terminal
+          two plots are automatically generated showing loss and acc. versus the epochs
+          for both the training and validation sets
+          then the model is saved for testing
+
+Step 4: test_model.py
+        this will set random goal locations on the map and have the robot navigate to them
+        if a collision may occur, it will be notified by the neural network and change
+        its course of action
+        once it reaches all the goal locations the simulation will stop
+        if the robot collides with an obstacle, it will reset and keep trying
+
