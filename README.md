@@ -7,7 +7,7 @@ This is a series of Jupyter notebooks containing my graduate school coursework.
 - [k-Means Clustering](#k-means-model)
 - [Convolutional Neural Network](#cnn-model)
 - [Dynamic Bayesian Network](#dynamic-bayes-model)
-- [Neural Network Robotics](#collision-prediction-model)
+- [Robot Neural Network](#collision-prediction-model)
 
 ### [Bayes Model](https://github.com/joshua-robison/ASU-GradSchool/blob/master/Notebooks/bayes_model.ipynb)
 #### Data Used: [MNIST Image Data](https://github.com/joshua-robison/ASU-GradSchool/blob/master/Datasets/bayes_data)
