@@ -33,3 +33,5 @@ collecting simulation data. This data is then pre-processed and split into train
 model is initialized, trained, and evaluated with this data. Then the simulation can be re-run testing the proficiency of
 our trained model. In order to maximize performance, more simulation data should be collected.
 
+A HOW-TO is included in this folder with the workflow outlined.
+
