@@ -7,6 +7,7 @@ This is a series of Jupyter notebooks containing my graduate school coursework.
 - [k-Means Clustering](#k-means-model)
 - [Convolutional Neural Network](#cnn-model)
 - [Dynamic Bayesian Network](#dynamic-bayes-model)
+- [Neural Network Robotics](#collision-prediction-model)
 
 ### [Bayes Model](https://github.com/joshua-robison/ASU-GradSchool/blob/master/Notebooks/bayes_model.ipynb)
 #### Data Used: [MNIST Image Data](https://github.com/joshua-robison/ASU-GradSchool/blob/master/Datasets/bayes_data)
@@ -25,4 +26,10 @@ This is simply an introduction and proof of concept.
 
 ### [Dynamic Bayes Model](https://github.com/joshua-robison/ASU-GradSchool/blob/master/Notebooks/dynamic_bayes_network.ipynb)
 This notebook explains how to analyze a problem and configure a dynamic bayesian network to simulate a stochastic process.
+
+### [Collision Prediction Model](https://github.com/joshua-robison/ASU-GradSchool/blob/master/Notebooks/RobotModel/)
+This is a series of files that simulates a two dimensional robot equipped with sensors. The robot can randomly navigate the environment
+collecting simulation data. This data is then pre-processed and split into training and validation sets. A neural network
+model is initialized, trained, and evaluated with this data. Then the simulation can be re-run testing the proficiency of
+our trained model. In order to maximize performance, more simulation data should be collected.
 
