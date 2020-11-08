@@ -1,6 +1,6 @@
 # ASU Machine Learning and Artificial Intelligence
 
-This is a series of Jupyter notebooks and Pytho files containing my graduate school coursework.
+This is a series of Jupyter notebooks and Python files containing my graduate school coursework.
 
 ## Table of Contents
 - [Bayesian Modeling](#bayes-model)
