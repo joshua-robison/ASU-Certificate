@@ -8,6 +8,7 @@ This is a series of Jupyter notebooks and Python files containing my graduate sc
 - [Convolutional Neural Network](#cnn-model)
 - [Dynamic Bayesian Network](#dynamic-bayes-model)
 - [Robot Neural Network](#collision-prediction-model)
+- [Planning Domain Definition Language](#packman-pddl)
 
 ### [Bayes Model](https://github.com/joshua-robison/ASU-Certificate/blob/master/Notebooks/bayes_model.ipynb)
 #### Data Used: [MNIST Image Data](https://github.com/joshua-robison/ASU-Certificate/blob/master/Datasets/bayes_data)
@@ -34,4 +35,8 @@ model is initialized, trained, and evaluated with this data. Then the simulation
 our trained model. In order to maximize performance, more simulation data should be collected.
 
 A [HOW-TO](https://github.com/joshua-robison/ASU-Certificate/blob/master/Notebooks/RobotModel/HOWTO.txt) is included in this folder with the workflow outlined.
+
+### [Packman PDDL](https://github.com/joshua-robison/ASU-Certificate/blob/master/Notebooks/Packman/)
+This contains a series of files using the Planning Domain Definition Language to solve "packman" puzzles. These files can be run at the following site:
+http://editor.planning.domains/#
 
